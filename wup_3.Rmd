@@ -31,6 +31,8 @@ basicCN + geom_boxplot()
 ```{r}
 boxplot(alcohol~Seat,data=davisdata)
 ```
+    
+This boxplot shows that those who sit in the back drink more while the ones who sit in the front drink less. More than 75% of the people who sit in the back drink more than those who sit in the middle or front.
   
 ### get fancy  
 
@@ -44,9 +46,22 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
+Seeing this data, we may reject the null hypothesis. these boxplots show that there is a big difference in how much people drink depending on where they sit.
+
 ## Numerical Summarys 
 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+The back row has an average of 9.6 which is drastically bigger than the front row, which has an average of 1.8, and the middle row, which has an average of 3.2.
+
 ## Inferential Tests
+
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+We will reject the null hypothesis, but we will seek clarification on which rows were different.  
 
 ## Conclusions
 
