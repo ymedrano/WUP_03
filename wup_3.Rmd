@@ -69,6 +69,6 @@ plot(TukeyHSD(model1))
 
 The tukey boxplot shows that the front and middle are different from the back, but the front and middle have no difference.  
 
-## Conclusions
+## Conclusion
 
-
+We will reject the hypothesis. The data shows that the average for the front row is 1.8 and the average for the middle row is 3.2. These numbers are very small compared to the average of the back row, which is 9.6. After analyzing all the data, we can conclude that those who sit in the back row drink more than those who sit in the front and middle rows.  
