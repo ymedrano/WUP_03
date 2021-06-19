@@ -61,7 +61,13 @@ The back row has an average of 9.6 which is drastically bigger than the front ro
 model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
-We will reject the null hypothesis, but we will seek clarification on which rows were different.  
+We will reject the hypothesis, but we will seek clarification on which rows were different.  
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+The tukey boxplot shows that the front and middle are different from the back, but the front and middle have no difference.  
 
 ## Conclusions
 
