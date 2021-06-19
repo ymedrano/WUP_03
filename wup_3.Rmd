@@ -27,9 +27,18 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```{r}
 basicCN + geom_boxplot()
 ```
-  
+ 
+```{r}
+boxplot(alcohol~Seat,data=davisdata)
+```
   
 ### get fancy  
+
+```{r}
+basicCN <- ggplot(davisdata,aes(x=Seat,y=alcohol))
+
+basicCN + geom_boxplot()
+```
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
